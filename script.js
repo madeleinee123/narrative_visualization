@@ -602,7 +602,7 @@ function displayPeople(attribute){
             .style("height", "80px")
             .style("font-size", "9pt")
             .style("text-anchor", "left")
-            .text(`people experieced symptoms`);
+            .text(`persons experieced symptoms`);
 
         svg.append("text")            
             .attr("class", "attribute")
