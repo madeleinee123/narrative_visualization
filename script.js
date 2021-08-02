@@ -272,7 +272,45 @@ function add2020TimeStamps(){
         .attr("x1", x_time_2020(new Date("2020-01-21")))
         .attr("y1", 0)
         .attr("x2", x_time_2020(new Date("2020-01-21")))
-        .attr("y2", 400);			
+        .attr("y2", 400);
+
+    svg.append("line")
+        .attr("class", "_2020")
+        .style("stroke-dasharray", ("3,3"))
+        .style("stroke", "#3F334D")
+        .style("stroke-width", 1.5)
+        .attr("x1", x_time_2020(new Date("2020-01-21")))
+        .attr("y1", 400)
+        .attr("x2", x_time_2020(new Date("2020-01-21")) -75)
+        .attr("y2", 445);
+    
+    svg.append("text")            
+        .attr("y",450)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-01-21"))-75)
+        .style("font-size", "9pt")
+        .style("font-weight", "bold")
+        .style("text-anchor", "middle")
+        .text("Jan. 21st 2020");	
+        
+        
+    svg.append("text")            
+        .attr("y",462)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-01-21"))-75)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("First confirmed");
+
+    svg.append("text")            
+        .attr("y",474)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-01-21"))-75)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("COVID case in US");
     
     // trump declares covid a national emergency 
     svg.append("line")
@@ -285,6 +323,44 @@ function add2020TimeStamps(){
         .attr("x2", x_time_2020(new Date("2020-03-13")))
         .attr("y2", 400);
 
+    svg.append("line")
+        .attr("class", "_2020")
+        .style("stroke-dasharray", ("3,3"))
+        .style("stroke", "#3F334D")
+        .style("stroke-width", 1.5)
+        .attr("x1", x_time_2020(new Date("2020-03-13")))
+        .attr("y1", 400)
+        .attr("x2", x_time_2020(new Date("2020-03-13")) -20)
+        .attr("y2", 445);
+
+    svg.append("text")            
+        .attr("y",450)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-03-13"))-20)
+        .style("font-size", "9pt")
+        .style("font-weight", "bold")
+        .style("text-anchor", "middle")
+        .text("Mar. 13th 2020");	
+        
+        
+    svg.append("text")            
+        .attr("y",462)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-03-13"))-20)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("Trump declares COVID");
+
+    svg.append("text")            
+        .attr("y",474)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-03-13"))-20)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("a national emergency");
+
     // all states are under a stay at home order
     svg.append("line")
         .attr("class", "_2020")
@@ -296,6 +372,43 @@ function add2020TimeStamps(){
         .attr("x2", x_time_2020(new Date("2020-04-26")))
         .attr("y2", 400);
 
+    svg.append("line")
+        .attr("class", "_2020")
+        .style("stroke-dasharray", ("3,3"))
+        .style("stroke", "#3F334D")
+        .style("stroke-width", 1.5)
+        .attr("x1", x_time_2020(new Date("2020-04-26")))
+        .attr("y1", 400)
+        .attr("x2", x_time_2020(new Date("2020-04-26")) + 5)
+        .attr("y2", 445);
+
+    svg.append("text")            
+        .attr("y",450)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-04-26"))+ 5)
+        .style("font-size", "9pt")
+        .style("font-weight", "bold")
+        .style("text-anchor", "middle")
+        .text("Apr. 26th 2020");	
+        
+        
+    svg.append("text")            
+        .attr("y",462)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-04-26"))+5)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("All states are under");
+
+    svg.append("text")            
+        .attr("y",474)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-04-26"))+5)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("a stay at home order");
     // survey begins
     svg.append("line")
         .attr("class", "_2020")
@@ -306,6 +419,44 @@ function add2020TimeStamps(){
         .attr("y1", 0)
         .attr("x2", x_time_2020(new Date("2020-05-05")))
         .attr("y2", 400);
+
+    svg.append("line")
+        .attr("class", "_2020")
+        .style("stroke-dasharray", ("3,3"))
+        .style("stroke", "#3F334D")
+        .style("stroke-width", 1.5)
+        .attr("x1", x_time_2020(new Date("2020-05-05")))
+        .attr("y1", 400)
+        .attr("x2", x_time_2020(new Date("2020-05-05")) + 110)
+        .attr("y2", 445);
+
+    svg.append("text")            
+        .attr("y",450)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-05-05"))+ 110)
+        .style("font-size", "9pt")
+        .style("font-weight", "bold")
+        .style("text-anchor", "middle")
+        .text("May 5th 2020");	
+        
+        
+    svg.append("text")            
+        .attr("y",462)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-05-05"))+110)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("NCHS Household Pulse");
+
+    svg.append("text")            
+        .attr("y",474)
+        .attr("class", "_2020")
+        .attr("x", x_time_2020(new Date("2020-05-05"))+100)
+        .style("font-size", "9pt")
+        .style("font-weight", "normal")
+        .style("text-anchor", "middle")
+        .text("Survey begins");
 }
 
 function legendAddition(svg, x_val, y_val, color, style, year, text){
