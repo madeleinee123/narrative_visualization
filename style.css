@@ -51,10 +51,15 @@ div.tooltip {
 
 .citations{
     font-size: 6pt;
-    margin: 50px;
+    margin-left:50px;
     background-color: #C0C5C1;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    position: fixed;  
+    left: 10px;  
+    bottom: 0px;  
+    right: 10px;   
+    width: 100%;  
+    height: 55px;
+    text-align: left;  
 }
 
 .title{
@@ -65,11 +70,26 @@ div.tooltip {
     background-color: #C0C5C1;
 }
 
-div.annotation{
+g.annotations{
     position: absolute;			
-    text-align: center;			
+    text-align: right;			
     width: 70px;					
     height: 50px;					
     padding: 2px;				
     font: 12px sans-serif;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #C0C5C1;
+}
+
+div#content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
 }

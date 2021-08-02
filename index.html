@@ -6,7 +6,7 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>COVID-19's Effects on Mental Health</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css ">
     </head>
     <body onload='init()'>
@@ -15,30 +15,69 @@
             <h3>A look at the effects on mental health by isolation during the COVID-19 pandemic in the USA</h3>
         </div>
 
-        <div id="scenes" class="carousel slide" data-wrap="false" onchange='change()'>
-            <ol class="carousel-indicators">
-                <li data-target="#scenes" data-slide-to="0" class="active"></li>
-                <li data-target="#scenes" data-slide-to="1"></li>
-                <li data-target="#scenes" data-slide-to="2"></li>
-              </ol>
+        <div id="scenes" class="carousel slide" data-wrap="false" data-interval="false">
             <div class="carousel-inner">
                 <!-- Scene 1 -->
-                <div id="scene1" class="carousel-item active">
-                    <div class="innards">
-                        <svg id="scene1Chart" width=1000 height=550 style='overflow: visible; margin: 5px;'></svg>                      
+                <div id="intro" class="carousel-item active">
+                    <div class="innards" style="margin: 50px; font-size: x-large;">
+                        <p class="info">
+                            After the start of the pandemic, many Americans started to feel the psychological effects of isolation.  They were staying at home all the time
+                            and getting limited socially interaction and virtual no physical interaction.  The National Center for Health Statistics (NCHS) released a household pulse survey
+                            in late August 2020 to monitor the psychological effects of the stay at home orders on households across America. They sent out and are still sending out (as of August 2021) 
+                            this survey everyweek and recording the percentage of people showing symptoms of anxiety, depression, or both. 
+                            <br/>
+                            <br/>
+                            Let's take a look at the results of this survey in comparison to recent years.  
+                        </p>
                     </div>  
                 </div>
-                <!-- Scene 2 -->
-                <div id="scene2" class="carousel-item">
-                    <svg id="scene2Chart" width=1000 height=550 style='overflow: visible; margin: 5px;'></svg>             
+                <div id="scene1" class="carousel-item ">
+                    <div class="innards">
+                        <svg id="scene1Chart" width=1000 height=500 style='overflow: visible; margin: 5px;'></svg>     
+                        <div>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" name="customRadio" id="twenty" onchange="display2020Data()">
+                                <label class="custom-control-label" for="twenty">Display data for 2020</label>
+                            </div>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" name="customRadio" id="twentyOne" onchange="display2021Data()">
+                                <label class="custom-control-label" for="twentyOne">Display data for 2021</label>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                <!-- Scene 3 -->
-                <div id="scene3" class="carousel-item">
-                    <svg id="scene3Chart" width=1000 height=550 style='overflow: visible; margin: 5px;'></svg>
+                <div id="intermission" class="carousel-item">
+                    <p style="margin: 50px; font-size: x-large;"> 
+                        As you can see, there is a large increase in the percentage of the population that is experiencing these symptoms of depression and anxiety.
+                        <br/>
+                        <br/>
+                        Now we will compare the percentages within different categories of people in the US. 
+                    </p>
+                </div>
+                <!-- Scene 2 & 3 -->
+                <div id="scene2" class="carousel-item">
+                    <div id="content">
+                        <svg id="scene2Chart" width=1000 height=550 style='overflow: visible; margin: 5px;'></svg>
+                        <div id="selection">
+                            <p>Choose a Category of People</p>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" name="customRadio" id="age" onchange="displayByAttribute('By Age')">
+                                <label class="custom-control-label" for="age">Age</label>
+                            </div>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" name="customRadio" id="gender" onchange="displayByAttribute('By Sex')">
+                                <label class="custom-control-label" for="gender">Gender</label>
+                            </div>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" name="customRadio" id="race" onchange="displayByAttribute('By Race/Hispanic ethnicity')">
+                                <label class="custom-control-label" for="race">Race</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#scenes" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <a class="carousel-control-prev disabled-link" href="#scenes" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon disabled-link" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#scenes" role="button" data-slide="next">
